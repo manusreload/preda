@@ -20,7 +20,10 @@ export default class Pila<T> {
 
     desapilar() {
         if(this.punteroPila > 0) {
-            return this.lista[this.punteroPila--];
+            this.punteroPila--;
+            let n = this.lista[this.punteroPila];
+            this.lista.splice(this.punteroPila, 1);
+            return n;
         }
     }
 
@@ -35,5 +38,14 @@ export default class Pila<T> {
 
     altura() {
         return this.punteroPila;
+    }
+
+    listaElementos() {
+        return this.lista;
+    }
+
+    vaciar() {
+        this.lista.splice(0, this.punteroPila);
+        this.punteroPila = 0;
     }
 }

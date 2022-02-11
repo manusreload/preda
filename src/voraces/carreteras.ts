@@ -23,7 +23,7 @@ export default class Carreteras extends Algoritmo<Entrada, Salida> {
 
 
     }
-    ejecutar(entrada: Entrada) : Salida {
+    ejecutar(entrada: Entrada) : Salida { // Prim
         let N = Conjunto.conjuntoConElementos(...entrada.listaVertices());
         let solucion = Conjunto.conjuntoVacio([0, 0]);
         let B = Conjunto.conjuntoConElementos(entrada.vertice(0));

@@ -5,7 +5,7 @@
 export default class Lista <T> {
     private lista : T[] = [];
 
-    static listaVacia<T>(tipo:T) {
+    static listaVacia<T>(tipo?:T ) {
         return new Lista<T>();
     }
     static listaConElementos<T>(...tipo:T[]) {
